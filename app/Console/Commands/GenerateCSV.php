@@ -43,7 +43,7 @@ class GenerateCSV extends Command
         $request = Request::create(route('export-file'), 'GET');
         $response = app()->handle($request);
         $responseBody = json_decode($response->getContent(), true);
-        dump($responseBody);
+        dump($response);
         return $responseBody;
     }
 }
